@@ -3,13 +3,15 @@ import React from "react";
 import "./App.module.css";
 
 import Header from "./Components/Header/Header.jsx";
-import HeroSection from "./Components/HeroSection/HeroSection.jsx";
+import Hero from "./Components/HeroSection/Hero.jsx";
+import Menu from "./Components/MenuSection/Menu.jsx";
 
 function App() {
   return (
     <React.Fragment>
       <Header />
-      <HeroSection />
+      <Hero />
+      <Menu />
     </React.Fragment>
   );
 }

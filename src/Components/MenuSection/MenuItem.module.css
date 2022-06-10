@@ -1,0 +1,85 @@
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.item-description {
+  display: flex;
+  flex-direction: column;
+  color: #000;
+}
+
+.item-description h4 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.item-description p {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.item-description span {
+  color: #ad5502;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* list item right side (ammount / add buton) */
+
+.item-add {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.item-add button {
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  color: #fff;
+  padding: 0.5rem 2rem;
+  background: #8a2b06;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.item-add button:hover {
+  background-color: #641e03;
+}
+
+.item-add__amount {
+  display: flex;
+  /* text-align: center; */
+  gap: 6px;
+}
+
+.item-add__amount h4 {
+  font-size: 1.4rem;
+  color: #000;
+}
+
+.item-add__amount input {
+  text-align: center;
+  width: 2.2rem;
+
+  border: 1px solid #333;
+  outline: none;
+  line-height: 0.5;
+}
+
+.item-add__amount input::-webkit-outer-spin-button,
+.item-add__amount input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.item-add__amount input::placeholder {
+  color: #000;
+  font-size: 1.3rem;
+}

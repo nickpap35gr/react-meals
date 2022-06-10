@@ -1,8 +1,8 @@
 import React from "react";
 
-import styles from "./HeroSection.module.css";
+import styles from "./Hero.module.css";
 
-const HeroSection = (props) => {
+const Hero = (props) => {
   return (
     <section className={styles["hero-section"]}>
       <div className={styles.hero}>
@@ -14,4 +14,4 @@ const HeroSection = (props) => {
   );
 };
 
-export default HeroSection;
+export default Hero;

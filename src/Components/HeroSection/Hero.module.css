@@ -2,11 +2,11 @@
   width: 50rem;
   padding: 1rem;
   border-radius: 9px;
-  margin: 0 auto;
+  margin: 0 auto -12rem auto;
   background-color: #383838;
   box-shadow: 0 1px 18px 10px rgb(0 0 0 / 25%);
   text-align: center;
-  transform: translateY(-12rem);
+  transform: translateY(-15rem);
 
   display: flex;
   flex-direction: column;
