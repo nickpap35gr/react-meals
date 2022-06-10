@@ -2,10 +2,16 @@ import React from "react";
 
 import "./App.module.css";
 
-import Header from "./Components/Header.jsx";
+import Header from "./Components/Header/Header.jsx";
+import HeroSection from "./Components/HeroSection/HeroSection.jsx";
 
 function App() {
-  return <Header />;
+  return (
+    <React.Fragment>
+      <Header />
+      <HeroSection />
+    </React.Fragment>
+  );
 }
 
 export default App;
