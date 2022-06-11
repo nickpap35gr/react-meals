@@ -30,7 +30,19 @@ export const ContextProvider = (props) => {
     });
   };
 
-  return <Context.Provider value={{ menu: menu, onIncreaseAmount: onIncreaseAmountHandler, totalItemsInCart: totalItemsInCart, itemsInCart: itemsInCart }}>{props.children}</Context.Provider>;
+  const onDecreaseAmountHandler = (item) => {
+    setMenu((prevMenu) => {
+      const newMenu = prevMenu.map((dish) => {
+        if (dish.dishName === item) dish.amount--;
+
+        return dish;
+      });
+
+      return newMenu;
+    });
+  };
+
+  return <Context.Provider value={{ menu: menu, onIncreaseAmount: onIncreaseAmountHandler, onDecreaseAmount: onDecreaseAmountHandler, totalItemsInCart: totalItemsInCart, itemsInCart: itemsInCart }}>{props.children}</Context.Provider>;
 };
 
 export default Context;

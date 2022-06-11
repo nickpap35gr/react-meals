@@ -16,7 +16,7 @@ const Modal = (props) => {
       <CartItemsList />
       <div className={styles["row-1"]}>
         <p>Total Amount</p>
-        <span>$0.00</span>
+        <span>${props.totalAmount.toFixed(2)}</span>
       </div>
       <div className={styles["row-2"]}>
         <button className={styles["close-btn"]} onClick={props.onClick}>
@@ -32,7 +32,7 @@ const Overlay = (props) => {
   return (
     <React.Fragment>
       <Backdrop />
-      <Modal onClick={props.onCloseButtonClick} />
+      <Modal onClick={props.onCloseButtonClick} totalAmount={props.totalAmount} />
     </React.Fragment>
   );
 };
@@ -41,6 +41,11 @@ const Header = (props) => {
   const [isInCart, setIsInCart] = useState(false);
 
   const ctx = useContext(Context);
+  console.log(ctx.itemsInCart);
+
+  const totalAmount = ctx.itemsInCart.reduce((prevItem, curItem) => {
+    return prevItem + curItem.dishPrice * curItem.amount;
+  }, 0);
 
   const onCartClickHandler = () => {
     setIsInCart(true);
@@ -65,7 +70,7 @@ const Header = (props) => {
       <header className={styles["header-img"]}>
         <img src={require("../../images/meal.jpg")} alt="" />
       </header>
-      {isInCart && ReactDOM.createPortal(<Overlay onCloseButtonClick={onCloseButtonClickHandler} />, document.getElementById("overlay-root"))}
+      {isInCart && ReactDOM.createPortal(<Overlay onCloseButtonClick={onCloseButtonClickHandler} totalAmount={totalAmount} />, document.getElementById("overlay-root"))}
     </React.Fragment>
   );
 };
