@@ -15,7 +15,7 @@ const Modal = (props) => {
     <div className={styles.modal}>
       <CartItemsList />
       <div className={styles["row-1"]}>
-        <p>Total Amount</p>
+        <h1 className={styles["amount"]}>Total Amount</h1>
         <span>${props.totalAmount.toFixed(2)}</span>
       </div>
       <div className={styles["row-2"]}>
@@ -41,7 +41,6 @@ const Header = (props) => {
   const [isInCart, setIsInCart] = useState(false);
 
   const ctx = useContext(Context);
-  console.log(ctx.itemsInCart);
 
   const totalAmount = ctx.itemsInCart.reduce((prevItem, curItem) => {
     return prevItem + curItem.dishPrice * curItem.amount;

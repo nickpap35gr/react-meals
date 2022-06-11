@@ -19,8 +19,8 @@ const CartItemsListItem = (props) => {
         <span>x{props.amount}</span>
       </div>
       <div className={styles["cart-item__buttons"]}>
-        <button onClick={onRemoveClickHandler}>-</button>
         <button onClick={onAddClickHandler}>+</button>
+        <button onClick={onRemoveClickHandler}>-</button>
       </div>
     </li>
   );
