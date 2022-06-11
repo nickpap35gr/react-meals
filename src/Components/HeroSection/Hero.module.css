@@ -1,5 +1,6 @@
 .hero {
-  width: 50rem;
+  max-width: 50rem;
+  width: 70%;
   padding: 1rem;
   border-radius: 9px;
   margin: 0 auto -12rem auto;
